@@ -1,0 +1,18 @@
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from "@angular/router";
+import {HomeComponent} from "./components/home/home.component";
+
+// Define the routes
+const ROUTES: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  }
+];
+
+@NgModule({
+  imports: [ RouterModule.forRoot(ROUTES, {useHash: true}) ],
+  exports: [ RouterModule ],
+  providers: []
+})
+export class AppRoutingModule {}
